@@ -77,7 +77,7 @@ export default function ManageRooms() {
       const roomsData = roomsResponse.data;
       const blocksData = blocksResponse.data;
 
-const roomsWithStats = roomsData.map((room: any) => ({
+const roomsWithStats = roomsData.map((room) => ({
   ...room,
   status: room.status as "available" | "full" | "maintenance" | "unavailable",
   occupiedCapacity: room.allocations?.length || 0,
